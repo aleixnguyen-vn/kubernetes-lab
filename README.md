@@ -3,8 +3,8 @@
 Learning to deploy an app on Kubernetes with K3s
 
 > [!TIP]
-> Demo credentials only
-> base64 encoded, not encrypted
+> Demo credentials only,
+> base64 encoded, not encrypted.
 > Do NOT use in production
 
 ## Troubleshooting
