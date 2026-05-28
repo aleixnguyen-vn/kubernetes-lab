@@ -28,13 +28,25 @@ spec:
         image: mariadb:11.4
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "supersecurepassword123"
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: mysql-root-password
         - name: MYSQL_DATABASE
-          value: "wordpress_k8s"
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: mysql-database
         - name: MYSQL_USER
-          value: "wp_user"
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: mysql-user
         - name: MYSQL_PASSWORD
-          value: "wppassword456"
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: mysql-password
         ports:
         - containerPort: 3306
           name: mysql
