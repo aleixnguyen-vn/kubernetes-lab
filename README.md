@@ -1,3 +1,3 @@
 # K3s WordPress
 
-Learn K8s on small VPS with K3s
+Just try new things on K8s
