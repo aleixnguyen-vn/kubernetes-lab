@@ -3,7 +3,9 @@ kind: Ingress
 metadata:
   name: wordpress-ingress
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
+  # enable SSL to handle HTTPS traffic
+  traefik.ingress.kubernetes.io/router.tls: "true"
+  traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
 spec:
   rules:
   - host: wp-k8.aleix-simracing.me
