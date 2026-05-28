@@ -1,3 +1,3 @@
-# K3s WordPress
+# WordPress on Kubernetes
 
-Just try new things on K8s
+Learning to deploy an app on Kubernetes with K3s
